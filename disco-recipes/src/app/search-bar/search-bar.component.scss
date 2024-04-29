@@ -1,0 +1,39 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .search-bar input {
+    width: 70%;  // Réduisez la largeur pour laisser de la place au bouton
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  .search-bar .search-button {
+    width: 5%;  // Définissez une largeur pour le bouton
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5a6068;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar .search-button:hover {
+    background-color: #7bff00;  // Changez la couleur de fond lorsque vous survolez le bouton
+  }
+
+  .search-bar .search-button:active {
+    background-color: #003d7a;  // Changez la couleur de fond lorsque vous cliquez sur le bouton
+  }
