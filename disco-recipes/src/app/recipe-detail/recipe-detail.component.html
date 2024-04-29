@@ -1,0 +1,16 @@
+<mat-card>
+    <img mat-card-image [src]="recipe.strMealThumb" alt="Photo of {{recipe.strMeal}}">
+    <iframe *ngIf="youtubeUrl" width="560" height="315" [src]="youtubeUrl" frameborder="0" allowfullscreen></iframe>
+    
+    <mat-card-content>
+      <mat-card-title>{{recipe.strMeal}}</mat-card-title>
+      <h2>Ingredients</h2>
+      <ul>
+        <li *ngFor="let ingredient of ingredients">
+          {{ingredient.name}}: {{ingredient.measure}}
+        </li>
+      </ul>
+      <p>{{recipe.strInstructions}}</p>
+    </mat-card-content>
+
+  </mat-card>

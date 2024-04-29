@@ -1,1 +1,27 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <form [formGroup]="filterForm" (ngSubmit)="submit()">
+    <a href="/"><span>Disco Recipes</span></a>
+    <div>
+      <label for="filter">Filter by:</label>
+      <select formControlName="filter">
+        <option disabled selected value>selectionner un filter </option>
+        <optgroup label="Categories">
+          <option *ngFor="let category of categories" [ngValue]="category">
+            {{ category.strCategory }}
+          </option>
+        </optgroup>
+        <optgroup label="Areas">
+          <option *ngFor="let area of areas" [ngValue]="area">
+            {{ area.strArea }}
+          </option>
+        </optgroup>
+        <optgroup label="Ingredients">
+          <option *ngFor="let ingredient of ingredients" [ngValue]="ingredient">
+            {{ ingredient.strIngredient }}
+          </option>
+        </optgroup>
+      </select>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</mat-toolbar>
