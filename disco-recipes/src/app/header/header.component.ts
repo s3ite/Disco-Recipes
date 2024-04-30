@@ -51,7 +51,6 @@ export class HeaderComponent {
 
   submit() {
     const value = this.filterForm.value.filter;
-    console.log(value);
     if (value?.strCategory) {
       this.router.navigate(['/categories', value.strCategory]);
     }

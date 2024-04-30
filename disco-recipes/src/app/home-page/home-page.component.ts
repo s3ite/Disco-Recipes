@@ -13,6 +13,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  title = 'Disco Recipes';
-  subtitle = 'Eveillez vos papilles avec des recettes de cuisine du monde entier !';
 }

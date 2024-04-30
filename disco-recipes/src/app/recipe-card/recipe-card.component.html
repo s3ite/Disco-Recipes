@@ -1,8 +1,8 @@
 <mat-card>
     <img mat-card-image [src]="meal?.strMealThumb" alt="Photo of {{meal?.strMeal}}">
     <mat-card-content>
-      <mat-card-title>{{meal?.strMeal}}</mat-card-title>
+      <mat-card-title class="title">{{ meal?.strMeal }}</mat-card-title>
       <p *ngIf="meal?.strCategory">{{meal?.strCategory}}, {{meal?.strArea}}</p>
-      <a [routerLink]="['/recipe', meal?.idMeal]">Voir la recette</a>
+      <a [routerLink]="['/recipe', meal?.idMeal]" i18n>Voir la recette</a>
     </mat-card-content>
   </mat-card>

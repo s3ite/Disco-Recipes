@@ -6,11 +6,12 @@ import { Recipe } from '../recipe';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-recipe-detail',
   standalone: true,
-  imports: [MatCardModule, CommonModule],
+  imports: [MatCardModule, CommonModule, MatDividerModule],
   templateUrl: './recipe-detail.component.html',
   styleUrl: './recipe-detail.component.scss',
 })

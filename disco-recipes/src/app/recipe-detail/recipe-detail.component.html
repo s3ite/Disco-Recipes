@@ -1,16 +1,29 @@
-<mat-card>
-    <img mat-card-image [src]="recipe.strMealThumb" alt="Photo of {{recipe.strMeal}}">
-    <iframe *ngIf="youtubeUrl" width="560" height="315" [src]="youtubeUrl" frameborder="0" allowfullscreen></iframe>
-    
-    <mat-card-content>
-      <mat-card-title>{{recipe.strMeal}}</mat-card-title>
-      <h2>Ingredients</h2>
+<div class="recipe-container">
+  <div class="recipe-details">
+    <h1 class="recipe-title">{{ recipe.strMeal }}</h1>
+    <div class="media-container">
+      <div class="media-left">
+        <div class="recipe-image">
+          <img [src]="recipe.strMealThumb" alt="Photo of {{ recipe.strMeal }}">
+        </div>
+      </div>
+      <div class="media-right">
+        <div class="recipe-video" *ngIf="youtubeUrl">
+          <iframe width="560" height="315" [src]="youtubeUrl" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="recipe-instructions">
+      <h2 i18n>Ingredients</h2>
       <ul>
         <li *ngFor="let ingredient of ingredients">
-          {{ingredient.name}}: {{ingredient.measure}}
+          {{ ingredient.name }}: {{ ingredient.measure }}
         </li>
       </ul>
-      <p>{{recipe.strInstructions}}</p>
-    </mat-card-content>
-
-  </mat-card>
+      <mat-divider></mat-divider>
+      <h2 i18n>instructions</h2>
+      <p>{{ recipe.strInstructions }}</p>
+    </div>
+  </div>
+</div>

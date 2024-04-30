@@ -1,27 +1,21 @@
 <mat-toolbar color="primary">
-  <form [formGroup]="filterForm" (ngSubmit)="submit()">
-    <a href="/"><span>Disco Recipes</span></a>
-    <div>
-      <label for="filter">Filter by:</label>
-      <select formControlName="filter">
-        <option disabled selected value>selectionner un filter </option>
-        <optgroup label="Categories">
-          <option *ngFor="let category of categories" [ngValue]="category">
-            {{ category.strCategory }}
-          </option>
-        </optgroup>
-        <optgroup label="Areas">
-          <option *ngFor="let area of areas" [ngValue]="area">
-            {{ area.strArea }}
-          </option>
-        </optgroup>
-        <optgroup label="Ingredients">
-          <option *ngFor="let ingredient of ingredients" [ngValue]="ingredient">
-            {{ ingredient.strIngredient }}
-          </option>
-        </optgroup>
-      </select>
-      <button type="submit">Submit</button>
-    </div>
+  <a href="/" class="logo" aria-label="Disco Recipes">
+    <span>Disco Recipes</span>
+  </a>
+  <form [formGroup]="filterForm" (ngSubmit)="submit()" class="filter-form">
+    <label for="filter" i18n>Filtrer par:</label>
+    <select formControlName="filter" id="filter">
+      <option disabled selected value i18n>Selectionner un filtre</option>
+      <optgroup label="Catégories">
+        <option *ngFor="let category of categories" [ngValue]="category">{{ category.strCategory }}</option>
+      </optgroup>
+      <optgroup label="Zones">
+        <option *ngFor="let area of areas" [ngValue]="area">{{ area.strArea }}</option>
+      </optgroup>
+      <optgroup label="Ingrédients">
+        <option *ngFor="let ingredient of ingredients" [ngValue]="ingredient">{{ ingredient.strIngredient }}</option>
+      </optgroup>
+    </select>
+    <button type="submit" i18n>Filtrer</button>
   </form>
 </mat-toolbar>

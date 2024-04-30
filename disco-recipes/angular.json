@@ -5,7 +5,10 @@
   "projects": {
     "disco-recipes": {
       "i18n": {
-        "sourceLocale": "fr-FR"
+        "sourceLocale": "fr-FR",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
       },
       "projectType": "application",
       "schematics": {
